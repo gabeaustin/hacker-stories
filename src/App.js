@@ -27,15 +27,18 @@ const newNumbers = numbers.map(function(number) {
 console.log(newNumbers);
 // 2, 8, 18, 32
 
-
 function App() {
   return (
     <div>
+        <h1>My Hacker Stories</h1>
 
         <label htmlFor="search">Search: </label>
         <input id="search" type="text" />
 
         <hr />
+
+        <List />
+        <List />
 
         {item.map(function(item) {
             return 
@@ -50,6 +53,21 @@ function App() {
         })}
     </div>
   );
+}
+
+function List() {
+    return item.map(function(item) {
+        return (
+            <div key={item.objectID}>
+                <span>
+                    <a href="{item.url}">{item.title}</a>
+                </span>
+                <span>{item.author}</span>
+                <span>{item.num_comments}</span>
+                <span>{item.points}</span>
+            </div>
+        )
+    })
 }
 
 export default App;
