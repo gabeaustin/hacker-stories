@@ -27,7 +27,7 @@ const newNumbers = numbers.map(function(number) {
 console.log(newNumbers);
 // 2, 8, 18, 32
 
-function App() {
+const App = () => {
   return (
     <div>
         <h1>My Hacker Stories</h1>
@@ -55,8 +55,8 @@ function App() {
   );
 }
 
-function List() {
-    return item.map(function(item) {
+const List = () => {
+    return item.map((item) => {
         return (
             <div key={item.objectID}>
                 <span>
